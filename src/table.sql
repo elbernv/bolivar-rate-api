@@ -1,0 +1,16 @@
+CREATE TABLE tasas_cambio (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(10) NOT NULL,
+    valor NUMERIC(12, 2) NOT NULL,
+    fecha_actualizacion TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fuente VARCHAR(50) DEFAULT 'BCV'
+);
+
+CREATE TABLE exchanges_promedios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(25) NOT NULL,
+    promedio NUMERIC(12, 2) NOT NULL,
+    fecha_actualizacion TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fuente VARCHAR(50)
+);
+
